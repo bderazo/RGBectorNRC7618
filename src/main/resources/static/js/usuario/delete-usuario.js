@@ -17,7 +17,7 @@ function alertDeleteUsuario(id) {
 
 function deleteUsuario(id) {
 	$.ajax({
-		url : "/usuarios/delete/" + id,
+		url : "/usuario/delete/" + id,
 		method : 'GET',
 		success : function(response){
 			Swal.fire(

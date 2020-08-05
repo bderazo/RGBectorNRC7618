@@ -52,9 +52,19 @@ public class UsuarioService implements UserDetailsService {
 		return (List<Usuario>) dao.findAll();
 	}
 	
+	@Transactional
+	public Usuario findByidusuario(Integer id) {
+		return dao.findByidusuario(id);
+	}
+	
 	@Transactional	
 	public Usuario findByNombre(String nombre){		
 		return dao.findByNombre(nombre);
+	}
+	
+	@Transactional	
+	public void delete(Integer id){		
+		dao.deleteByidusuario(id);
 	}
 
 }
